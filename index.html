@@ -30,7 +30,7 @@
 
   <!--NEWS-->
   <section class="news-section">
-    <h2 class="section-headline">📰 Neuigkeiten</h2>
+    <h2 class="section-headline">📰 News</h2>
     <div class="news-grid">
 
       <!-- News 1 -->
@@ -230,12 +230,13 @@
         <strong>Eurocommand Chatbot</strong>
       </div>
       <div class="chatbot-controls">
-        <button onclick="resetChat()" title="Zurücksetzen">🔄</button>
+        <button onclick="resetChat()" title="Neuer Chat">🔄</button>
         <button onclick="toggleChat()" title="Schließen">×</button>
       </div>
     </div>
     <div class="chatbot-messages" id="chatMessages">
-      <div class="bot-msg">Hallo! Wie kann ich dir helfen?</div>
+      <div class="bot-msg">Moin, ich bin der Eurocommand Chatbot.</div>
+      <div class="bot-msg">Wie kann ich dir heute behilflich sein?</div>
       <div class="chatbot-options" id="chatOptions">
         <button onclick="handleChat('software')">🛠 Softwareproblem</button>
         <button onclick="handleChat('bug')">🐞 Fehler melden</button>
@@ -278,7 +279,7 @@
       appendUserMessage(message);
       userInput.value = "";
       setTimeout(() => {
-        appendBotMessage("Vielen Dank für deine Nachricht! Wir melden uns bald.");
+        appendBotMessage("Vielen Dank für deine Nachricht! Unser Team wird sich um dein Anliegen kümmern!");
       }, 600);
     }
     function appendBotMessage(text) {
@@ -297,7 +298,8 @@
     }
     function resetChat() {
       chatMessages.innerHTML = `
-        <div class="bot-msg">Hallo! Wie kann ich dir helfen?</div>
+        <div class="bot-msg">Moin, ich bin der Eurocommand Chatbot.</div>
+        <div class="bot-msg">Wie kann ich dir heute behilflich sein?</div>
         <div class="chatbot-options" id="chatOptions">
           <button onclick="handleChat('software')">🛠 Softwareproblem</button>
           <button onclick="handleChat('bug')">🐞 Fehler melden</button>
